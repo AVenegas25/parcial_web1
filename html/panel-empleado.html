@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Empleado - PNP Digital</title>
+  <link rel="stylesheet" href="../css/panel-empleado.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="barra-nav">
+      <div class="marca">
+        <img src="/images (1).png" alt="Logo PNP" class="logo-header" onerror="this.style.display='none'">
+        <span>PNP Digital</span>
+      </div>
+      <div class="acciones-header">
+        <span id="tag-rol-usuario" class="tag-rol">TURNO POLICIAL</span>
+        <button id="boton-salir" class="btn-salir">Cerrar Sesión</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="contenedor-dashboard">
+    
+    <!-- Tarjetas KPI de Resumen -->
+    <div class="grid-kpi">
+      <div class="card-kpi kpi-total">
+        <h4>Total Asignadas</h4>
+        <div class="valor-kpi" id="kpi-total">0</div>
+      </div>
+      <div class="card-kpi kpi-registradas">
+        <h4>Registradas</h4>
+        <div class="valor-kpi" id="kpi-registrados">0</div>
+      </div>
+      <div class="card-kpi kpi-proceso">
+        <h4>En Investigación</h4>
+        <div class="valor-kpi" id="kpi-proceso">0</div>
+      </div>
+      <div class="card-kpi kpi-resueltas">
+        <h4>Resueltas</h4>
+        <div class="valor-kpi" id="kpi-resueltos">0</div>
+      </div>
+    </div>
+
+    <!-- Tabla Principal -->
+    <div class="card-tabla">
+      <h2 class="titulo-tabla">Atención de Denuncias Asignadas al Turno</h2>
+      <div class="contenedor-tabla-responsive">
+        <table class="tabla-pedidos">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Código</th>
+              <th>DNI</th>
+              <th>Delito</th>
+              <th>Lugar</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-panel-general">
+            <!-- Se carga desde JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Ventana Modal de Gestión -->
+    <div id="modal-panel" class="modal-overlay" style="display: none;">
+      <div class="modal-card">
+        <h3 class="modal-titulo">Gestionar Registro N° <span id="lbl-codigo">---</span></h3>
+        
+        <form id="form-panel-gestion">
+          <input type="hidden" id="pnl-id">
+
+          <div class="campo-form">
+            <label for="pnl-estado">Estado del Trámite</label>
+            <select id="pnl-estado" required>
+              <option value="registrado">Registrado</option>
+              <option value="en_proceso">En Proceso / Investigación</option>
+              <option value="resuelto">Resuelto</option>
+              <option value="archivado">Archivado</option>
+            </select>
+          </div>
+
+          <div class="campo-form">
+            <label for="pnl-lugar">Lugar del Incidente</label>
+            <input type="text" id="pnl-lugar" required>
+          </div>
+
+          <div class="campo-form">
+            <label for="pnl-detalle">Detalle del Expediente</label>
+            <textarea id="pnl-detalle" rows="4" required></textarea>
+          </div>
+
+          <div class="modal-acciones">
+            <button type="button" id="btn-cerrar-pnl" class="btn-accion btn-cancelar-modal">Cancelar</button>
+            <button type="submit" class="btn-accion btn-guardar-modal">Guardar Cambios</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </main>
+
+  <script type="module" src="../js/panel/panel-empleado.js"></script>
+</body>
+</html>

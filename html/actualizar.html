@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actualizar Denuncia - PNP</title>
+  <link rel="stylesheet" href="../css/actualizar.css">
+</head>
+<body>
+
+  <header class="pnp-navbar">
+    <div class="brand-container">
+      <span class="brand-title">PNP Digital</span>
+    </div>
+    <button id="boton-salir" class="btn-salir">Cerrar Sesión</button>
+  </header>
+
+  <main class="container">
+    <h1 class="form-title">Actualizar Datos de Registro</h1>
+
+    <form id="form-actualizar">
+      <input type="hidden" id="denuncia-id">
+
+      <div class="form-group">
+        <label for="codigo-registro">Código de Registro</label>
+        <input type="text" id="codigo-registro" readonly>
+      </div>
+
+      <div class="form-group">
+        <label for="lugar-incidente">Lugar del Incidente</label>
+        <input type="text" id="lugar-incidente" required placeholder="Ej. Av. Arequipa Cdra 15, Lima">
+      </div>
+
+      <div class="form-group">
+        <label for="descripcion-hechos">Descripción de los Hechos</label>
+        <textarea id="descripcion-hechos" rows="5" required placeholder="Detalla lo sucedido..."></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn-guardar">Guardar Cambios</button>
+        <a href="consulta-denuncia.html" class="btn-cancelar">Cancelar</a>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    &copy; 2026 Policía Nacional del Perú
+  </footer>
+
+  <script type="module" src="../js/actualizar/actualizar.js"></script>
+</body>
+</html>

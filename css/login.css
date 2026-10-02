@@ -1,0 +1,20 @@
+@import url('index.css');
+
+.animar-entrada { animation: fadeIn 400ms ease-out forwards; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+
+.panel-formulario { max-width: 480px; margin: 48px auto; background: var(--blanco); border: 1px solid var(--gris-borde); border-radius: var(--radio); padding: 36px; box-shadow: var(--sombra); }
+.encabezado-form { text-align: center; margin-bottom: 20px; }
+.logo-form { height: 48px; }
+
+.formulario { display: flex; flex-direction: column; gap: 18px; }
+.campo label { display: block; font-size: .88rem; font-weight: 600; margin-bottom: 6px; color: var(--texto-suave); }
+.campo input, .campo select, .campo textarea { width: 100%; font-size: 1rem; padding: 11px 12px; border: 1.5px solid var(--gris-borde); border-radius: 8px; background: var(--gris-fondo); }
+.campo input:focus, .campo select:focus, .campo textarea:focus { outline: none; border-color: var(--verde-pnp); }
+
+.mensaje-estado { margin-top: 14px; padding: 12px; border-radius: 6px; font-size: .9rem; display: none; }
+.mensaje-estado.visible { display: block; }
+.mensaje-estado.exito { background: #E8F5E9; color: var(--exito); border: 1px solid #A5D6A7; }
+.mensaje-estado.fallo { background: #FFEBEE; color: var(--error); border: 1px solid #EF9A9A; }
+
+.enlace-secundario { text-align: center; font-size: .9rem; margin-top: 18px; }

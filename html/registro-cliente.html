@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear Cuenta - PNP Digital</title>
+  <link rel="stylesheet" href="../css/registro-cliente.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor barra-nav">
+      <a href="index.html" class="marca">
+        <img src="/images.png"alt="Logo PNP" class="logo-header">
+        PNP <span>Digital</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <div class="panel-formulario animar-entrada">
+      <h2>Registro de Ciudadano</h2>
+      <form class="formulario" id="formulario-registro-cliente" novalidate>
+        <div class="campo">
+          <label for="nombre">Nombre Completo</label>
+          <input type="text" id="nombre" placeholder="Juan Pérez" required>
+        </div>
+        <div class="campo">
+          <label for="correo">Correo Electrónico</label>
+          <input type="email" id="correo" placeholder="correo@ejemplo.com" required>
+        </div>
+        <div class="campo">
+          <label for="contrasena">Contraseña</label>
+          <input type="password" id="contrasena" placeholder="Mínimo 6 caracteres" required>
+        </div>
+        <button type="submit" class="boton boton-relleno">Crear Cuenta</button>
+        <div class="mensaje-estado" id="mensaje-registro"></div>
+      </form>
+      <p class="enlace-secundario">¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <p>&copy; 2026 Policía Nacional del Perú</p>
+  </footer>
+
+  <script type="module" src="../js/registro/registro-cliente.js"></script>
+</body>
+</html>

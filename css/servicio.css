@@ -1,0 +1,8 @@
+@import url('index.css');
+
+.seccion-servicios { padding: 64px 0; }
+.titulo-seccion { text-align: center; color: var(--verde-pnp); margin-bottom: 40px; }
+.rejilla-servicios { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.tarjeta-servicio { background: #fff; padding: 32px; border-radius: var(--radio); border: 1px solid var(--gris-borde); text-align: center; transition: var(--transicion); }
+.tarjeta-servicio:hover { transform: translateY(-6px); box-shadow: var(--sombra); }
+.icono-tarjeta { width: 54px; height: 54px; margin-bottom: 16px; }

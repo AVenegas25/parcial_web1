@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar Denuncia - PNP Digital</title>
+  <link rel="stylesheet" href="../css/registro-denuncia.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor barra-nav">
+      <a href="index.html" class="marca">
+        <img src="/images (1).png" alt="Logo PNP" class="logo-header">
+        PNP <span>Digital</span>
+      </a>
+      <div style="display: flex; gap: 10px; align-items: center;">
+        <button id="btn-mis-denuncias" class="boton">← Mis Denuncias</button>
+        <button id="boton-salir" class="boton">Cerrar Sesión</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <div class="panel-formulario animar-entrada">
+      <h2>Formulario de Denuncia Digital</h2>
+      <form class="formulario" id="formulario-denuncia" novalidate>
+        <div class="campo">
+          <label for="dni">DNI de la Víctima / Denunciante</label>
+          <input type="text" id="dni" maxlength="8" placeholder="12345678" required>
+        </div>
+        <div class="campo">
+          <label for="tipo-delito">Tipo de Delito</label>
+          <select id="tipo-delito" required>
+            <option value="" disabled selected>Seleccione opción</option>
+            <option value="Hurto / Robo">Hurto / Robo</option>
+            <option value="Estafa / Ciberdelito">Estafa / Ciberdelito</option>
+            <option value="Extorsión">Extorsión</option>
+            <option value="Violencia Familiar">Violencia Familiar</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="lugar">Lugar del Incidente</label>
+          <input type="text" id="lugar" placeholder="Ej. Av. Arequipa 123, Lince" required>
+        </div>
+        <div class="campo">
+          <label for="detalle">Descripción Detallada de los Hechos</label>
+          <textarea id="detalle" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="boton boton-relleno">Registrar Denuncia</button>
+
+        <div class="sello-confirmacion" id="sello-confirmacion">
+          DENUNCIA<br> REGISTRADA<br> PNP
+        </div>
+        <div class="mensaje-estado" id="mensaje-denuncia"></div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <p>&copy; 2026 Policía Nacional del Perú</p>
+  </footer>
+
+  <script type="module" src="../js/registro/registro.js"></script>
+</body>
+</html>

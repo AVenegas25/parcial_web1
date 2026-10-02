@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Administración - PNP</title>
+  <link rel="stylesheet" href="../css/panel-admin.css">
+</head>
+<body>
+
+  <header class="pnp-navbar">
+    <div class="brand-title">PNP Digital - Panel Administrador</div>
+    <button id="boton-salir" class="btn-salir">Cerrar Sesión</button>
+  </header>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>CÓDIGO</th>
+        <th>DNI</th>
+        <th>DELITO</th>
+        <th>LUGAR</th>
+        <th>ESTADO</th>
+        <th>ACCIONES</th>
+      </tr>
+    </thead>
+    <tbody id="tabla-panel-general">
+      <!-- Datos cargados dinámicamente -->
+    </tbody>
+  </table>
+
+  <div class="card-gestion">
+    <h2 class="titulo-gestion">Cambiar Estado N° <span id="lbl-codigo">---</span></h2>
+    
+    <form id="form-panel-admin">
+      <input type="hidden" id="pnl-id">
+
+      <div class="form-campo">
+        <label for="pnl-estado">Estado del Trámite</label>
+        <select id="pnl-estado" required>
+          <option value="registrado">Registrado</option>
+          <option value="en_proceso">En Proceso</option>
+          <option value="resuelto">Resuelto</option>
+          <option value="archivado">Archivado</option>
+        </select>
+      </div>
+
+      <div class="form-campo">
+        <label for="pnl-lugar">Lugar del Incidente</label>
+        <input type="text" id="pnl-lugar">
+      </div>
+
+      <div class="form-campo">
+        <label for="pnl-detalle">Descripción / Detalle</label>
+        <textarea id="pnl-detalle" rows="4"></textarea>
+      </div>
+
+      <div class="form-acciones">
+        <button type="submit" class="btn-actualizar">Actualizar Estado</button>
+        <button type="button" id="btn-cerrar-pnl" class="btn-cancelar">Cancelar</button>
+      </div>
+    </form>
+  </div>
+
+  <script type="module" src="../js/panel/panel-admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Denuncias - PNP</title>
+  <link rel="stylesheet" href="../css/consulta-denuncia.css">
+</head>
+<body>
+
+  <header class="pnp-navbar">
+    <h2>Portal Ciudadano PNP</h2>
+    <div class="usuario-info">
+      <span>Bienvenido, <strong id="nombre-usuario">...</strong></span>
+      <button id="boton-salir" class="btn-salir">Cerrar Sesión</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="encabezado-seccion">
+      <h1>Mis Denuncias Registradas</h1>
+      <button id="btn-nueva-denuncia" class="btn-principal">+ Registrar Nueva Denuncia</button>
+    </div>
+
+    <div class="tabla-contenedor">
+      <table>
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Delito</th>
+            <th>Lugar</th>
+            <th>Fecha</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-mis-denuncias">
+          <!-- Carga dinámicamente -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <script type="module" src="../js/consulta/consulta.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+@import url('login.css');
+
+.lista-contacto { list-style: none; padding: 0; margin: 20px 0; line-height: 2.2; }
+.lista-contacto strong { color: var(--verde-pnp); }
